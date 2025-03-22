@@ -33,6 +33,6 @@ jobs:
                   gh release create "$tag" \
                     --title="$tag" \
                     --draft \
-                    dist
+                    dist/*.min.js
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
