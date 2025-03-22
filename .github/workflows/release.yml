@@ -2,8 +2,8 @@ name: Release Lib
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     tags:
       - 'v*.*.*' # 只有 vX.X.X 形式的 tag 触发
   workflow_dispatch:
@@ -26,9 +26,7 @@ jobs:
                   npm run build
 
             - name: Create release
-              if: startsWith(github.ref, 'refs/tags/')
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            #   if: startsWith(github.ref, 'refs/tags/')
               run: |
                   tag="${GITHUB_REF#refs/tags/}"
 
@@ -36,3 +34,5 @@ jobs:
                     --title="$tag" \
                     --draft \
                     dist
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
