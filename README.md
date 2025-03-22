@@ -1,11 +1,10 @@
-# Obsidian Autocorrect Plugin
+##   测试内容
 
-  A plugin running on Obsidian (https://obsidian.md/) that utilizes Autocorrect (https://github.com/huacnlee/autocorrect) to format Markdown content.
 
-## Usage
+demo,               demo
+ooo
 
-  Use the shortcut: `cmd + p`, and type in the input box: `Format content`.
 
-## License
 
-  [MIT](https://choosealicense.com/licenses/mit/)
+
+de   ， 德莫
